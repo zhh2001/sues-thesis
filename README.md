@@ -61,8 +61,9 @@ chapters/          摘要、正文各章、参考文献、附录、致谢等
 texfigs/           用 TikZ 绘制的示例插图
 figures/           示例图片
 bib/refers.bib     参考文献数据库
-gbt7714-*.bst      国标 GB/T 7714 参考文献样式
 ```
+
+参考文献样式用的是 GB/T 7714-2025 数字顺序（`gbt7714-2025-numeric`），由 TeX Live 自带的 `gbt7714` 宏包提供，仓库里不再单独存放 `.bst` 文件。需要换其它标准（如作者-年份）时，改 `chapters/ref.tex` 里的 `\bibliographystyle` 即可。
 
 ## 写作流程
 

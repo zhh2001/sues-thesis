@@ -1,0 +1,20 @@
+\bibliographystyle{gbt7714-2025-numeric}
+% 设置参考文献风格，采用 TeX Live 自带的 gbt7714 宏包样式（GB/T 7714-2025 数字顺序）
+% 样式来源：https://github.com/zepinglee/gbt7714-bibtex-style
+% 设置附录的页眉页脚样式
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[C]{\songti\xiaowu 第 \thepage 页}
+	\fancyhead[L]{\songti\xiaowu 上海工程技术大学硕士学位论文}
+	\fancyhead[R]{\songti\xiaowu \quad 参考文献 }
+}
+\thispagestyle{plain}
+% 设置参考文献
+
+\renewcommand{\bibfont}{\small}
+\begin{spacing}{1.25}
+	\addcontentsline{toc}{chapter}{参考文献}
+	\setlength{\bibsep}{0.4em}
+	\nocite{*}
+	\bibliography{bib/refers}
+\end{spacing}
