@@ -1,0 +1,57 @@
+\documentclass{suesthesis} 
+% 附录1.25倍行距
+\begin{document}
+% 是否处于盲审查状态，blind是盲审状态，normal是正常状态
+\begin{spacing}{1.5}
+    \namesBlind{normal}
+    % 论文中文封面
+    \input{covers/pagetitle-chinese}
+    % 论文英文封面
+    \input{covers/pagetitle-english}
+    % 原创性声明
+    \input{covers/original}
+    % 授权说明书
+    \input{covers/authorization}
+    % 从这里开始生成目录部分页码
+\end{spacing}
+% 需要1.5倍行距部分
+\frontmatter
+% 中文摘要和英文摘要
+\input{chapters/abstract}
+% 插入目录
+\begin{spacing}{1.5}
+    \tableofcontents
+    %目录1.5倍行距
+\end{spacing}
+
+% 符号及缩略词说明
+% 这里不需要可以删掉
+\input{chapters/sym-def}
+\mainmatter
+% 从这里开始生成文章部分页码
+% 第一章
+\input{chapters/introduction}
+% 第二章
+\input{chapters/formula}
+% 第三章
+\input{chapters/algorithms}
+% 第四章
+\input{chapters/docref}
+% 第五章
+\input{chapters/summary}
+% 第六章
+\input{chapters/ref-ext}
+\backmatter
+% 参考文献
+\input{chapters/ref}
+% 附录
+\input{chapters/appendix}
+% 注意： “攻读硕士学位期间发表的论文” 是有选择注释掉的，如果都注释掉选择以下命令：
+\blindfileinput{chapters/achievements}
+% 部分注释掉需要选择以下命令，注意修改其中的内容
+% \input{chapters/achievements}
+% 注意： “致谢”章节，在盲审阶段是需要注释掉的
+% 致谢
+\blindfileinput{chapters/thanks}
+
+\end{document}
