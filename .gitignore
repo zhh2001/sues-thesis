@@ -20,6 +20,7 @@
 # 日志与辅助
 *.log
 *.out
+*.xdv
 *.synctex.gz
 *.synctex(busy)
 missfont.log
