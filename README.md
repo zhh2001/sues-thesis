@@ -83,3 +83,7 @@ latexindent -l .latexindent.yaml chapters/algorithms.tex
 ## 声明
 
 本模板为学生个人整理，未经学校官方认证，仅供参考，因格式问题导致的后果请自行承担。提交前请务必对照当年研究生处发布的最新要求自查。
+
+## 许可证与致谢
+
+本模板基于 MobtgZhang 的开源模板改写，沿用 MIT 许可证，详见 [LICENSE](LICENSE)。
