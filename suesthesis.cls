@@ -24,13 +24,9 @@
 % 依赖的Latex版本
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{suesthesis}[2026/06/09 v1.0 SUES thesis template https://github.com/zhh2001/sues-thesis]
-% 使用xelex进行编译
-\RequirePackage{ifxetex}
+% 使用 XeLaTeX 引擎编译（iftex 的 \RequireXeTeX 会在非 XeTeX 下自动报错）
+\RequirePackage{iftex}
 \RequireXeTeX
-\ifxetex\else
-\ClassError{suesthesis}{You must use the `xelatex' driver\MessageBreak Please choose `xelatex'}{%
-Just choose `xelatex', no `pdflatex' or `latex' and so on.}
-\fi
 % 定义字号大小
 % 设置字号
 
@@ -47,29 +43,16 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand{\liuhao}{\fontsize{7.5pt}{11.25pt}\selectfont}
 % -----------------------------------------------------------------
 % \LoadClass[UTF8,a4paper,cs4size,zihao=-4,linespread=1.625,space=auto,oneside]{ctexbook}
-% 正文中文为宋体，非中文为Times New Roman字体，小四，1.5倍行间距，首行缩进2字符。
+% 正文中文为宋体，非中文为 Times New Roman，小四，行距 setstretch 1.25（约合 Word 1.5 倍行距），首行缩进 2 字符。
 \LoadClass[UTF8,a4paper,cs4size,zihao=-4,space=auto,oneside]{ctexbook}
 \RequirePackage{setspace}
 \AtBeginDocument{\setstretch{1.25}}
 \RequirePackage{fontspec}
 % 设置英文字体
-\setmainfont{Times New Roman}[
-    BoldFont = Times New Roman Bold,
-    ItalicFont = Times New Roman Italic,
-    BoldItalicFont = Times New Roman Bold Italic
-]
-
-\setsansfont{Times New Roman}[
-    BoldFont = Times New Roman Bold,
-    ItalicFont = Times New Roman Italic,
-    BoldItalicFont = Times New Roman Bold Italic
-]
-
-\setmonofont{Times New Roman}[
-    BoldFont = Times New Roman Bold,
-    ItalicFont = Times New Roman Italic,
-    BoldItalicFont = Times New Roman Bold Italic
-]
+% 正文及无衬线、等宽西文均用 Times New Roman；粗体/斜体由 fontspec 自动匹配
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Times New Roman}
 % 设置字体
 % 宋体
 \setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}
