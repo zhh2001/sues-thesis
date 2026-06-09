@@ -93,14 +93,14 @@ for i in range(n):
 \begin{center}
     \begin{minipage}{0.8\textwidth}
         \begin{algorithm}[H]%[!htp]
-            \caption{粒子群算法} %算法的名字
-            {\bf 输入:} %算法的输入， \hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
+            \caption{粒子群算法} % 算法的名字
+            {\bf 输入:} % 算法的输入，\hspace*{0.02in}用来控制位置，同时利用 \\ 进行换行
             群体规模$N$，每个粒子的位置$x_{i}$和速度$v_{i}$\\
-            {\bf 输出:} %算法的结果输出
+            {\bf 输出:} % 算法的结果输出
             output result
             \begin{algorithmic}[1]
-                \State 初始化粒子群 % \State 后写一般语句
-                \While{不满足结束条件} % For 语句，需要和EndFor对应
+                \State 初始化粒子群     % \State 后写一般语句
+                \While{不满足结束条件}  % For 语句，需要和EndFor对应
                 \State 计算每个粒子的适应度$F_{it}(i)$
                 \State 对每个粒子，用它的适应度值$F_{it}(i)$和个体极值$P_{\text{best}}(i)$比较，如果$F_{it}(i)>P_{\text{best}}(i)$，则用$F_{it}(i)$替换掉$P_{\text{best}}(i)$；
                 \State 对每个粒子，用它的适应度值$F_{it}(i)$和全局极值$g_{\text{best}}$比较，如果$F_{it}(i)>g_{\text{best}}$，则使用$F_{it}(i)$替换$g_{\text{best}}$；
@@ -147,7 +147,7 @@ for i in range(n):
 接下来看下面这两个定义
 
 \begin{definition}[二次剩余]
-    当存在某个$X$，表达式$X^{2}\equiv{d}(\mod{p})$ 成立的时候,称$d$是模$p$的二次剩余;当对任意$X,X^{2}\equiv{d}(\mod{p})$不成立的时候,称$d$是模$p$的非二次剩余。
+    当存在某个$X$，表达式$X^{2}\equiv{d}(\mod{p})$ 成立的时候，称$d$是模$p$的二次剩余；当对任意$X,X^{2}\equiv{d}(\mod{p})$不成立的时候，称$d$是模$p$的非二次剩余。
     \label{def:QuadraticResidue}
 \end{definition}
 
@@ -186,10 +186,11 @@ for i in range(n):
 基于以上的这些个性质，研究一些定理
 
 \begin{lemma}
-    设素数$p>3$,那么不定方程$x^{2}+3y^{2}=p$有解的充要条件是$\left(\dfrac{-3}{p}\right)$,即$p$是形如$6k+1$的素数。
+    设素数$p>3$，那么不定方程$x^{2}+3y^{2}=p$有解的充要条件是$\left(\dfrac{-3}{p}\right)$，即$p$是形如$6k+1$的素数。
     \label{lem:example}
 \end{lemma}
-由\cref{lem:example}我们知道了引理。所以证明如下所示
+由\cref{lem:example}我们知道了引理。
+所以证明如下所示
 \begin{proof}[证明\cref{lem:example}]
     必要性证明：若上述不定方程有解$x_{0},y_{0}$，则显然有
     \begin{equation}
@@ -210,15 +211,15 @@ for i in range(n):
 
     由$\left(\dfrac{-3}{p}\right)$可以得到同余方程$s^{2}\equiv{-3}(\mod{p})$必定有解。
     设$s_{0}$为其解，考虑集合$\left\{(u,v)\left|0\leq{u}<\sqrt{p},0\leq{v}<\sqrt{p}\right.\right\}$，
-    这个集合的元素个数等于$\left(\left[\sqrt{p}\right]+1\right)^{2}>p$.由抽屉原则可以得到,必定有两组不同的$\left\{u_{1},v_{1}\right\},\left\{u_{2},v_{2}\right\}$，使得
+    这个集合的元素个数等于$\left(\left[\sqrt{p}\right]+1\right)^{2}>p$.由抽屉原则可以得到，必定有两组不同的$\left\{u_{1},v_{1}\right\},\left\{u_{2},v_{2}\right\}$，使得
     \begin{equation}
         s_{0}v_{1}-u_{1}\equiv{s_{0}v_{2}-u_{2}}(\mod{p})
     \end{equation}
-    即有$\hat{u}\equiv{s_{0}\hat{v}}(\mod{p})$这里$\hat{u_{1}}-\hat{u_{2}},\hat{v_{1}}-\hat{v_{2}}$一定不全为零。由此以及$s_{0}$是上述同余方程的解,即得到
+    即有$\hat{u}\equiv{s_{0}\hat{v}}(\mod{p})$这里$\hat{u_{1}}-\hat{u_{2}},\hat{v_{1}}-\hat{v_{2}}$一定不全为零。由此以及$s_{0}$是上述同余方程的解，即得到
     \begin{equation}
         \hat{u}^{2}+3\hat{v}\equiv{0}(\mod{p})
     \end{equation}
-    另一方面,由原方程可以得到
+    另一方面，由原方程可以得到
     \begin{equation}
         0<\hat{u}^{2}+3\hat{v}<4p
     \end{equation}
@@ -226,11 +227,12 @@ for i in range(n):
     \begin{equation}
         \hat{u}^{2}+3\hat{v}=p,2p,3p
     \end{equation}
-    若$\hat{u}^{2}+3\hat{v}=p$，则原方程必有解；若$\hat{u}^{2}+3\hat{v}=2p$，则必有$2\mid{\hat{u}+\hat{v}}$，所以就会有$2\mid{\hat{u}^{2}+3\hat{v}^{2}}$，因而得到$2\mid{p}$，与$p$是奇质数矛盾；若$\hat{u}^{2}+3\hat{v}=3p$,则$3\mid{3\hat{u}}$，因而就会有
+    若$\hat{u}^{2}+3\hat{v}=p$，则原方程必有解；若$\hat{u}^{2}+3\hat{v}=2p$，则必有$2\mid{\hat{u}+\hat{v}}$，所以就会有$2\mid{\hat{u}^{2}+3\hat{v}^{2}}$，因而得到$2\mid{p}$，与$p$是奇质数矛盾；若$\hat{u}^{2}+3\hat{v}=3p$，则$3\mid{3\hat{u}}$，因而就会有
     \begin{equation}
         \hat{v}^{2}+3\left(\dfrac{\hat{u}}{3}\right)=p
     \end{equation}
-    这样原方程也有解.证明完毕.
+    这样原方程也有解。
+    证明完毕。
     \label{prf:example}
 \end{proof}
 由我们知道了证明环境的使用。通过，我们可以得到以下的推论
@@ -255,7 +257,8 @@ for i in range(n):
 由\cref{asu:example}我们知道了假设环境的使用。
 
 \begin{conjecture}[霍奇猜想]
-    给定一个随机形状，它可以和一个多项式描述的形状同胚。换句话说，我们能够取任意曲面并通过适当变形操作，最终得到一个多项式的解集
+    给定一个随机形状，它可以和一个多项式描述的形状同胚。
+    换句话说，我们能够取任意曲面并通过适当变形操作，最终得到一个多项式的解集
     \label{con:example}
 \end{conjecture}
 由\cref{con:example}我们知道了猜想环境的使用。
@@ -278,7 +281,7 @@ for i in range(n):
 由\cref{pri:example}我们知道了定律环境的使用。
 
 \begin{problem}[理发师悖论]
-    假如理发师,声称他只给给所有自己不刮胡子的人刮胡子。那么我们可以问: 他是否应该给自己刮胡子 ?
+    假如理发师，声称他只给给所有自己不刮胡子的人刮胡子。那么我们可以问: 他是否应该给自己刮胡子？
     \label{pro:example}
 \end{problem}
 由\cref{pro:example}我们知道了问题环境的使用。
