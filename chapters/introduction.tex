@@ -1,0 +1,42 @@
+\chapter{绪\quad 论}
+
+\section{关于\LaTeX 模板}
+
+本模板用于撰写上海工程技术大学硕士学位论文，已按学校研究生处的格式要求配置好封面、页眉页脚、目录和参考文献等内容，写作时专注论文本身即可。
+项目地址见 \href{https://github.com/zhh2001/sues-thesis}{GitHub}。
+
+\section{关于\TeX 和 \LaTeX}
+
+ {\TeX}是由图灵奖得主，程序(program)和算法(algorithm)这两个概念的提出者，《计算机程序设计的艺术》(The Art of Computer Programming)的作者，著名计算机科学家Donald E. Knuth（高德纳）发明的排版系统。
+TeX是特别优秀的排版工具，尤其善于处理复杂的图表和公式。
+%
+\href{https://en.wikipedia.org/wiki/LaTeX}{\LaTeX}（拉泰赫）是一种基于{\TeX}的排版系统，由由美国计算机学家Leslie Lamport（莱斯利·兰伯特）在20世纪80年代初期开发，因此被称为Lamport Tex，简称LaTeX。
+
+\section{关于使用的平台和发行版本}
+\LaTeX 拥有众多的发行版，主要有一下几个：
+\begin{table}[!h]
+  \centering
+  %\renewcommand{\arraystretch}{1}
+  \setlength\tabcolsep{6.4pt}
+  \bicaption{主要的\LaTeX{} 发行版。}{Main \LaTeX{} distributions.}
+  \label{tab:latex-distr}
+  \begin{tabular}{c|c|c|c}
+    \hline
+    \diagbox{发行版}{支持平台}                         & Windows & Linux  & OSX    \\
+    \hline
+    \href{http://www.tug.org/texlive/}{TexLive} & \cmark  & \cmark & \cmark \\
+    \hline
+    \href{https://miktex.org/}{MikTex}          & \cmark  & \xmark & \xmark \\
+    \hline
+    \href{http://www.tug.org/mactex/}{MacTex}   & \xmark  & \xmark & \cmark \\ \hline
+  \end{tabular}\vspace{-6pt}
+
+\end{table}%
+
+\section{使用哪个\TeX 编辑器}
+
+目前\TeX 编辑器是多种多样的，使用一个较好的编辑器对于编写\LaTeX 文档是有着非常好的效果。
+TexLive默认的编辑器是texstudio编辑器。
+
+\paragraph{在线编辑器} 现在有很多在线的latex编辑器，最为常见和著名的编辑器要属\href{https://overleaf.com/}{OverLeaf}。
+这种在线latex平台编辑器能够非常好的支持各种排版的功能，类似于腾讯文档，它支持多人协作编辑文档，具有较好的使用效果。
