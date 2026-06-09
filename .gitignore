@@ -30,6 +30,9 @@ missfont.log
 *.fdb_latexmk
 *.pre
 
+# 编译输出 PDF
+/paper.pdf
+
 # 参考文献（由 .bib 自动生成）
 *.bbl
 *.blg
