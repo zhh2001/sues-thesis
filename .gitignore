@@ -1,0 +1,57 @@
+# ===== LaTeX 编译中间文件 =====
+*.aux
+*.lof
+*.lot
+*.toc
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.nav
+*.snm
+*.vrb
+*.xdy
+
+# 日志与辅助
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+missfont.log
+
+# latexmk
+*.fls
+*.fdb_latexmk
+*.pre
+
+# 参考文献（由 .bib 自动生成）
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*-blx.bib
+
+# 索引/术语/列表等其它生成物
+*.brf
+*.lol
+*.thm
+*.loa
+
+# 临时与备份文件
+*.bak
+*.tmp
+*~
+*.swp
+
+# ===== 编辑器 / 操作系统 =====
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
