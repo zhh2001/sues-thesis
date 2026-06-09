@@ -1,0 +1,9 @@
+# latexindent 配置：把模板自定义的代码环境当作 verbatim，
+# 格式化时完全不改动其内部缩进（避免 Python 等代码被压平）。
+# 用法：latexindent -l .latexindent.yaml 文件.tex
+verbatimEnvironments:
+    CLanguage: 1
+    CPlusPlus: 1
+    Java: 1
+    Python: 1
+    Matlab: 1

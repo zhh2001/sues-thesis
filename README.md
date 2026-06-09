@@ -72,6 +72,14 @@ bib/refers.bib     参考文献数据库
 3. 参考文献写进 `bib/refers.bib`；
 4. 进入盲审时，把 `paper.tex` 里的 `\namesBlind{normal}` 改成 `\namesBlind{blind}`，作者、导师、学号等信息会自动隐去，致谢和科研成果两章也会自动跳过。
 
+## 代码格式化（可选）
+
+如果用 latexindent 格式化本模板，请带上仓库自带的 `.latexindent.yaml`，否则代码环境（`CLanguage`、`Python` 等）里的代码会被重新缩进、破坏原有排版：
+
+```bash
+latexindent -l .latexindent.yaml chapters/algorithms.tex
+```
+
 ## 声明
 
 本模板为学生个人整理，未经学校官方认证，仅供参考，因格式问题导致的后果请自行承担。提交前请务必对照当年研究生处发布的最新要求自查。
