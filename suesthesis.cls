@@ -412,7 +412,7 @@
 %-----------------------------------------
 % 载入参考文献宏包，设置引用格式
 \RequirePackage[numbers,sort&compress]{natbib}
-\setcitestyle{square,super}
+\setcitestyle{square}
 %-----------------------------------------
 % 设置代码插入格式
 % 设置代码环境
