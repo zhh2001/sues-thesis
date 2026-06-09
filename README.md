@@ -4,6 +4,14 @@
 
 模板只支持 **XeLaTeX** 引擎，源文件统一 **UTF-8** 编码，用 pdfLaTeX 等其它引擎编译不通过。
 
+## 效果预览
+
+| 中文封面 | 目录 |
+| :---: | :---: |
+| ![中文封面](assets/cover.png) | ![目录](assets/toc.png) |
+| **公式与三线表** | **代码与算法** |
+| ![公式与三线表](assets/formula-table.png) | ![代码与算法](assets/code.png) |
+
 ## 获取
 
 ```bash
