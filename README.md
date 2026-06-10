@@ -78,7 +78,7 @@ bib/refers.bib     参考文献数据库
 1. 修改 `covers/pagetitle-chinese.tex` 和 `pagetitle-english.tex` 里的题目、姓名、导师、专业等信息；
 2. 把 `chapters/` 下的示例内容替换成自己的论文；
 3. 参考文献写进 `bib/refers.bib`；
-4. 进入盲审时，把 `paper.tex` 里的 `\namesBlind{normal}` 改成 `\namesBlind{blind}`，作者、导师、学号等信息会自动隐去，致谢和科研成果两章也会自动跳过。
+4. 进入盲审时，把 `paper.tex` 里的 `\namesBlind{normal}` 改成 `\namesBlind{blind}`：作者、导师、学号等信息会自动隐去，致谢章节自动跳过；成果页仍保留，但其中作者只标“第几作者”，用 `\blindswitch{盲审显示}{正常显示}` 命令控制（示例见 `chapters/achievements.tex`）。
 
 ## 代码格式化（可选）
 

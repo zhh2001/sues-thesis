@@ -8,17 +8,21 @@
 \pagestyle{plain}
 
 \addcontentsline{toc}{chapter}{攻读硕士学位期间发表的学术论文及取得的相关科研成果}
-宋体，小四，1.25倍行间距，顶格排
+宋体，小四，1.25 倍行间距，顶格排。
+盲审阶段本页须保留，但只能标注“第几作者”、不得出现作者或他人姓名（写作时删除此段说明）。
+
+% 用 \blindswitch{盲审显示}{正常显示} 控制作者部分：
+% 盲审时显示“第一作者”等、隐去姓名；正常时显示真实作者。
 
 \section*{1.发表的学术论文}
 \begin{enumerate}[label={[\arabic*]}]
-    \item 编排方式同参考文献；
-    \item 这是第二条发表的学术论文；
+    \item \blindswitch{第一作者}{张三, 李四, 王五}. 基于粒子群算法求解多目标优化问题[J]. 计算机研究与发展, 2004, 41(7): 6.
+    \item \blindswitch{第二作者}{李四, 张三}. 这是第二条发表的学术论文.
     \item 这是第三条发表的学术论文。
 \end{enumerate}
 \section*{2.取得的相关科研成果}
 \begin{enumerate}[label={[\arabic*]}]
-    \item 成果类别、名称及相关信息，本人贡献或排名，取得时间；
+    \item 成果类别、名称及相关信息，\blindswitch{第二参与人}{本人贡献或排名}，取得时间；
     \item 第二条科研成果；
     \item 第三条科研成果。
 \end{enumerate}
