@@ -95,3 +95,13 @@ latexindent -l .latexindent.yaml chapters/algorithms.tex
 ## 许可证与致谢
 
 本模板基于 MobtgZhang 的开源模板改写，沿用 MIT 许可证，详见 [LICENSE](LICENSE)。
+
+## 相较上游模板的主要改动
+
+在 MobtgZhang 开源模板的基础上做了如下调整：
+
+- 参考文献改用 TeX Live 自带的 `gbt7714` 宏包（GB/T 7714-2015 数字顺序），不再随仓库存放 `.bst`；正文引用编号改为与文字同号
+- 重做盲审逻辑：修复盲审开关在分组内失效的问题；致谢自动剔除，成果页保留但作者仅标“第几作者”，并新增 `\blindswitch` 命令
+- 修正若干编译问题与笔误（不存在的文献引用、封面默认日期错位、示例代码与公式等）
+- 文档类清理：改用 `iftex`、精简字体声明
+- 提供 `latexindent` 配置，格式化时不破坏代码块
