@@ -536,7 +536,7 @@
 % \def\@makefnmark{\hbox{\@thefnmark}}  % 正文中脚注标签与正文平齐
 % \def\@makefnmark{\hbox{【\@thefnmark{}】}}  % 正文中脚注标签加一个全角的方括号【】
 % 数字单纯带圈，正常数字
-\newcommand\myfootnotestyle[1]{\ifcase#1  \or \ding{191}  \or \ding{192}\or \ding{193}\or \ding{194}\or \ding{195}\or \ding{196}\or \ding{197}\or \ding{198}\or \ding{199}\or \ding{200}\or \ding{201}\else *\fi\relax}
+\newcommand\myfootnotestyle[1]{\ifcase#1  \or \ding{192}\or \ding{193}\or \ding{194}\or \ding{195}\or \ding{196}\or \ding{197}\or \ding{198}\or \ding{199}\or \ding{200}\or \ding{201}\else *\fi\relax}
 %--------------------------------------------------------
 % 定义附录  
 % \renewcommand\appendix{\appendixname}
